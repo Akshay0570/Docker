@@ -1,5 +1,6 @@
 FROM openjdk:11
 LABEL author=akki57
-ADD wget https://referenceapplicationskhaja.s3.us-west-2.amazonaws.com/spring-petclinic-2.4.2.jar /spc
+RUN export DEBIAN_FRONTEND=noninteractive && apt update && touch /Spc/warfile  
+ADD wget https://referenceapplicationskhaja.s3.us-west-2.amazonaws.com/spring-petclinic-2.4.2.jar /Spc/warfile
 EXPOSE 8081
 CMD ["java", "-jar", "/spring-petclinic-2.4.2.jar"]
