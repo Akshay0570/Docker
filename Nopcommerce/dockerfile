@@ -2,7 +2,7 @@ FROM  mcr.microsoft.com/dotnet/aspnet:6.0
 LABEL author="AkNk"
 LABEL project="aniketh"
 RUN apt update && apt install unzip -y && mkdir nop/bin && mkdir nop/logs
-ADD wget https://github.com/nopSolutions/nopCommerce/releases/download/release-4.50.3/nopCommerce_4.50.3_NoSource_linux_x64.zip /nop/nopCommerce_4.50.3_NoSource_linux_x64.zip
+ADD https://github.com/nopSolutions/nopCommerce/releases/download/release-4.50.3/nopCommerce_4.50.3_NoSource_linux_x64.zip /nop/nopCommerce_4.50.3_NoSource_linux_x64.zip
 EXPOSE 80
 WORKDIR /nop
 CMD ["/usr/bin/dotnet", /var/www/nopCommerce450/Nop.Web.dll]
