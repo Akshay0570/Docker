@@ -3,4 +3,4 @@ ADD https://github.com/nopSolutions/nopCommerce/releases/download/release-4.50.3
 RUN apt update && apt install unzip -y && mkdir /Nop/bin && mkdir /Nop/logs
 WORKDIR /Nop
 EXPOSE 80
-CMD ["unzip", "/Nop/nopCommerce_4.50.3_NoSource_linux_x64.zip", "/Nop/Nop.Web.dll"]
+CMD ["unzip", "/Nop/nopCommerce_4.50.3_NoSource_linux_x64.zip", "/usr/bin/dotnet", "/var/www/nopCommerce450/Nop.Web.dll"]
